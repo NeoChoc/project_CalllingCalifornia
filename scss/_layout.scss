@@ -1,0 +1,300 @@
+// File: _layout.scss
+// This file contains all styles related to the header of the site/application.
+
+/* general */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $white;
+	font-family: 'Work Sans';
+	width: 100%;
+}
+
+/* header */
+.header {
+	background-color: $black; /* Used if the image is unavailable */
+	color: $white;
+	height: fit-content;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	.header__img {
+		height: 59px;
+		width: 100%;
+		transform: scaleX(3.5);
+	}
+	.header__part--1 {
+		p {
+			&:first-of-type {
+				padding: 24px 0 10px 0;
+			}
+			&:last-of-type {
+				padding: 10px 0;
+			}
+		}
+		h2 {
+			span {
+				@include text-stroke;
+				display: block;
+				opacity: 0.7;
+			}
+		}
+	}
+	.header__part--2 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 22px 0;
+		padding: 22px;
+		img {
+			height: $medium;
+		}
+	}
+}
+
+/* main */
+.main {
+	.part__1,
+	.part__2 {
+		background-color: $black;
+		color: $white;
+	}
+	.part__1 {
+		padding: 22px;
+		position: relative;
+		img {
+			position: absolute;
+			top: 270px;
+			right: 24px;
+			width: 46%;
+		}
+	}
+	.part__2 {
+		padding: 22px 22px 60px 22px;
+		p {
+			padding-top: $xx-small;
+			span {
+				display: block;
+				font-size: xx-large;
+				font-family: 'LarishNeueSemibold';
+			}
+		}
+	}
+	.part__3 {
+		margin-top: 22px;
+		padding: 22px;
+		h3,
+		p {
+			width: 60%;
+			margin: 5px auto;
+		}
+		p {
+			line-height: $small;
+			margin-bottom: 38px;
+		}
+		.part__3--gallery {
+			.gallery__dots {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 16px;
+				/* The dots/bullets/indicators */
+				.dots__element {
+					cursor: pointer;
+					height: 19px;
+					width: 19px;
+					margin: 0 2px;
+					background-color: $lgray;
+					border-radius: 50%;
+					display: inline-block;
+					transition: background-color 0.6s ease;
+					&:hover {
+						background-color: $dgray;
+					}
+				}
+			}
+			.gallery__slide {
+				padding: 18px 0;
+				.gallery__elemt {
+					margin: 0 auto;
+					width: -webkit-fill-available;
+					/* Fading animation */
+					animation-name: fade;
+					animation-duration: 1.5s;
+				}
+				.gallery__elemt--1 {
+				}
+				.gallery__elemt--2 {
+				}
+				.gallery__elemt--3 {
+				}
+				.gallery__elemt--4 {
+				}
+				.gallery__elemt--5 {
+				}
+				.gallery__elemt--6 {
+				}
+				.gallery__elemt--7 {
+				}
+			}
+		}
+	}
+
+	.part__4 {
+		background-color: $black;
+		color: $white;
+		padding: 22px;
+		height: 54vh;
+		.part__4--text {
+			display: flex;
+			align-items: flex-end;
+			margin-top: 36px;
+			div {
+				&:first-of-type {
+					width: 44%;
+				}
+				&:last-of-type {
+					width: 56%;
+				}
+				h3 {
+					margin-right: 60px;
+				}
+				p {
+					&:first-of-type {
+						font-family: 'LarishNeueSemibold';
+						font-size: $x-small;
+					}
+					&:last-of-type {
+						font-size: $xx-small;
+						margin-top: 14px;
+					}
+				}
+			}
+		}
+		.part__4--gallery {
+			position: relative;
+
+			.gallery__element {
+				position: absolute;
+			}
+			.gallery__element--1 {
+				top: 68px;
+				width: 68%;
+				z-index: 100;
+			}
+			.gallery__element--2 {
+				top: 210px;
+				right: 0;
+				width: 52%;
+				z-index: 101;
+			}
+			.gallery__element--3 {
+				top: 226px;
+				right: 100px;
+				width: 52%;
+				animation: rotation 12s infinite linear;
+			}
+		}
+	}
+
+	.part__5 {
+		margin-top: 230px;
+		height: 72vh;
+		padding: 22px;
+		.part__5--text {
+			display: flex;
+			align-items: flex-end;
+			margin-top: 36px;
+			div {
+				&:first-of-type {
+					width: 44%;
+				}
+				&:last-of-type {
+					width: 56%;
+				}
+				h3 {
+					margin-right: 60px;
+				}
+				p {
+					&:first-of-type {
+						font-family: 'LarishNeueSemibold';
+						font-size: $x-small;
+					}
+					&:last-of-type {
+						font-size: $xx-small;
+						margin-top: 14px;
+					}
+				}
+			}
+		}
+		.part__5--gallery {
+			position: relative;
+			.gallery__element {
+				position: absolute;
+			}
+			.gallery__element--1 {
+				top: 123px;
+
+				width: 37%;
+				z-index: 101;
+			}
+			.gallery__element--2 {
+				top: 68px;
+				right: 0;
+				width: 71%;
+				z-index: 100;
+			}
+		}
+	}
+}
+
+/* footer */
+.footer {
+	background-color: $black;
+	color: $white;
+	margin-top: 230px;
+	height: 72vh;
+	padding: 22px;
+	position: relative;
+	.footer__banner--animated {
+		background: linear-gradient(178deg, (#15d8a6, 12%), (#d81a15, 12%));
+		position: absolute;
+	}
+	.footer__part--1 {
+		p {
+			font-family: 'LarishNeueSemibold';
+			font-size: $x-small;
+		}
+	}
+	.footer__part--2 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.footer__social {
+		}
+		.footer__logo {
+			.footer__logo--1 {
+				width: 10%;
+			}
+			.footer__logo--2 {
+				width: 10%;
+			}
+		}
+	}
+}
+
+/* Slideshow container */
+.slideshow-container {
+	position: relative;
+	margin: auto;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 50px) {
+}

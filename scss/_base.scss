@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'Work Sans';
+	src: url('../fonts/work-sans-v17-latin-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'LarishNeueSemibold';
+	src: url('../fonts/LarishNeueSemibold.woff') format('woff');
+}
+
+/* VARIABLES */
+/* colors */
+$white: #fff;
+$black: #000;
+$lgray: #bbb;
+$dgray: #717171;
+
+/* size */
+$xx-small: 8px;
+$x-small: 10px;
+$small: 13px;
+$medium: 16px;
+$large: 18px;
+$x-large: 24px;
+$xx-large: 33px;
+$xxx-large: 45px;
+
+@mixin text-stroke() {
+	-webkit-text-fill-color: $black;
+	-webkit-text-stroke-width: thin;
+	-webkit-text-stroke-color: $white;
+}
+
+/* MIXINS */
+/* button */
+@mixin btn() {
+	border: 1px solid $white;
+	color: $white;
+	font-size: $x-small;
+	padding: 6px 18px;
+	opacity: 0.7;
+	&:hover {
+		background-color: $white;
+		color: $black;
+		transition: background 1.2s;
+	}
+}
