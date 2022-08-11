@@ -24,28 +24,33 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: stretch;
+
 	.header__img {
-		height: 59px;
+		height: 100px;
 		width: 100%;
 		transform: scaleX(3.5);
 	}
+
 	.header__part--1 {
 		p {
 			&:first-of-type {
 				padding: 24px 0 10px 0;
 			}
+
 			&:last-of-type {
 				padding: 10px 0;
 			}
 		}
+
 		h2 {
 			span {
-				@include text-stroke;
+				@include text-stroke-1;
 				display: block;
 				opacity: 0.7;
 			}
 		}
 	}
+
 	.header__part--2 {
 		display: flex;
 		justify-content: space-between;
@@ -195,9 +200,9 @@ body {
 			}
 			.gallery__element--3 {
 				top: 226px;
-				right: 100px;
+				right: 125px;
 				width: 52%;
-				animation: rotation 12s infinite linear;
+				animation: rotation 22s infinite linear;
 			}
 		}
 	}
@@ -206,6 +211,7 @@ body {
 		margin-top: 230px;
 		height: 72vh;
 		padding: 22px;
+
 		.part__5--text {
 			display: flex;
 			align-items: flex-end;
@@ -257,44 +263,79 @@ body {
 .footer {
 	background-color: $black;
 	color: $white;
-	margin-top: 230px;
-	height: 72vh;
+	height: 75vh;
 	padding: 22px;
 	position: relative;
 	.footer__banner--animated {
-		background: linear-gradient(178deg, (#15d8a6, 12%), (#d81a15, 12%));
 		position: absolute;
+		background-color: $white;
+		color: $black;
+		rotate: 45deg;
+		right: -240px;
+		top: 113px;
+		z-index: 90;
+		overflow: hidden;
+		h2 {
+			animation: diagonal 4s infinite;
+			line-height: 55px;
+			width: max-content;
+			span {
+				@include text-stroke-2;
+			}
+		}
+	}
+	.banner__curtain {
+		position: absolute;
+		top: -250px;
+		left: 0;
+		background-color: $white;
+		width: 100vw;
+		height: 250px;
+		z-index: 90;
 	}
 	.footer__part--1 {
+		margin-top: 101px;
+		width: 48%;
 		p {
 			font-family: 'LarishNeueSemibold';
 			font-size: $x-small;
+			margin-bottom: 18px;
 		}
 	}
 	.footer__part--2 {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		.footer__social {
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		margin-top: 50px;
+		div {
+			.footer__social {
+				display: flex;
+				justify-content: space-around;
+				align-items: stretch;
+			}
+			p {
+				&:first-of-type {
+					margin-top: 22px;
+					margin-bottom: 10px;
+				}
+				&:last-of-type {
+					margin-bottom: 22px;
+				}
+			}
 		}
 		.footer__logo {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding-bottom: 50px;
 			.footer__logo--1 {
-				width: 10%;
+				width: 120px;
+				padding: 10px;
 			}
 			.footer__logo--2 {
-				width: 10%;
+				width: 120px;
+				padding: 10px;
 			}
 		}
 	}
-}
-
-/* Slideshow container */
-.slideshow-container {
-	position: relative;
-	margin: auto;
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 50px) {
 }

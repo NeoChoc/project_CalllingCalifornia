@@ -24,13 +24,19 @@ $x-large: 24px;
 $xx-large: 33px;
 $xxx-large: 45px;
 
-@mixin text-stroke() {
+/* MIXINS */
+@mixin text-stroke-1 {
 	-webkit-text-fill-color: $black;
 	-webkit-text-stroke-width: thin;
-	-webkit-text-stroke-color: $white;
+	-webkit-text-stroke-color: white;
 }
 
-/* MIXINS */
+@mixin text-stroke-2 {
+	-webkit-text-fill-color: $white;
+	-webkit-text-stroke-width: thin;
+	-webkit-text-stroke-color: $black;
+}
+
 /* button */
 @mixin btn() {
 	border: 1px solid $white;
